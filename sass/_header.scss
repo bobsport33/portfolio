@@ -1,0 +1,61 @@
+.header {
+  height: 100vh;
+  color: $color-dark;
+  clip-path: polygon(0 0, 100% 0%, 100% 70vh, 0% 95vh);
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color-light, 0.3),
+      rgba($color-light-blue, 0.7)
+    ),
+    url("../images/laptop-4.jpg");
+
+  &__title {
+    padding: 3rem;
+
+    line-height: 4rem;
+  }
+
+  &__heading {
+    font-size: 5rem;
+    padding-bottom: 1rem;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 7rem;
+      padding-top: 8rem;
+      padding-bottom: 3rem;
+    }
+  }
+  &__subheading {
+    font-size: 3rem;
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column-reverse;
+    }
+
+    &--list {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      @media only screen and (max-width: $bp-small) {
+        justify-content: space-between;
+      }
+    }
+    &--item {
+      padding: 3rem;
+    }
+
+    &--link {
+      color: $color-dark;
+      text-decoration: none;
+      font-size: 2.5rem;
+      transform: 0.2s all;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

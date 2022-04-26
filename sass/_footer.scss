@@ -1,0 +1,25 @@
+.footer {
+  margin-top: 5rem;
+  text-align: center;
+  padding-bottom: 5rem;
+  color: $color-green;
+
+  &__list {
+    margin-bottom: 3rem;
+    &--item {
+      color: $color-dark-2;
+      text-decoration: none;
+      font-size: 3rem;
+      padding: 3rem;
+    }
+  }
+
+  &__social {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  &__copyright {
+    font-size: 2rem;
+  }
+}

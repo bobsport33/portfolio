@@ -1,0 +1,19 @@
+.about-me {
+  background-color: $color-dark-2;
+  padding: 3rem;
+  color: $color-light-blue;
+
+  &__heading {
+    font-size: 4rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 3rem;
+  }
+
+  &__background {
+    margin: 0 auto;
+    width: 70%;
+    font-size: 2rem;
+    padding-bottom: 5rem;
+  }
+}
