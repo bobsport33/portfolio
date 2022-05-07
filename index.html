@@ -193,33 +193,50 @@
     </section>
     <section id="about-me" class="about-me">
       <h2 class="about-me__heading">About Me</h2>
-      <p class="about-me__background">
-        I am a band director that has spent the past two years learning about
-        web development. My first introduction into coding was in 2020 during
-        the pandemic. I had a lot of time on my hands and started learning
-        Python to help imporve my fantasy football team. I found that I really
-        enjoyed the process of learning and figuring out those first few
-        projects, and searched for other opportunities to learn coding. I found
-        several online bootcamp courses on things like Python, Web Development,
-        and JavaScript and have continued learning ever since.
-      </p>
+      <div class="about-me__content">
+        <p class="about-me__background">
+          I am a band director that has spent the past two years learning about
+          web development. My first introduction into coding was in 2020 during
+          the pandemic. I had a lot of time on my hands and started learning
+          Python to help imporve my fantasy football team. I found that I really
+          enjoyed the process of learning and figuring out those first few
+          projects, and searched for other opportunities to learn coding. I
+          found several online bootcamp courses on things like Python, Web
+          Development, and JavaScript and have continued learning ever since.
+        </p>
+        <iframe
+          class="about-me__resume"
+          frameborder="0"
+          scrolling="no"
+          src="https://docs.google.com/file/d/1sy6WuewhKWE_eSTBFhH2rD59pdfwSahA/preview?usp=drivesdk"
+        ></iframe>
+      </div>
     </section>
     <section class="footer">
       <ul class="footer__list">
         <a class="footer__list--item" href="#">Home</a>
-        <a class="footer__list--item" href="#">Projects</a>
-        <a class="footer__list--item" href="#">About Me</a>
+        <a class="footer__list--item" href="#projects">Projects</a>
+        <a class="footer__list--item" href="#about-me">About Me</a>
       </ul>
       <!-- social icons -->_ --
       <div class="footer__social">
-        <ion-icon class="footer__social_icons" name="logo-facebook"></ion-icon>
-        <ion-icon class="footer__social_icons" name="logo-instagram"></ion-icon>
-        <ion-icon class="footer__social_icons" name="logo-twitter"></ion-icon>
-        <ion-icon class="footer__social_icons" name="logo-youtube"></ion-icon>
+        <a class="footer__social_icons" href="https://github.com/bobsport33"
+          ><ion-icon class="footer__icon" name="logo-github"></ion-icon
+        ></a>
+        <a
+          class="footer__social_icons"
+          href="https://www.linkedin.com/in/bob62kelly/"
+          ><ion-icon class="footer__icon" name="logo-linkedin"></ion-icon
+        ></a>
+        <a class="footer__social_icons" href="https://www.facebook.com/illini8"
+          ><ion-icon class="footer__icon" name="logo-facebook"></ion-icon
+        ></a>
       </div>
 
       <p class="footer__copyright">©Copyright Robert Kelly 2022</p>
-
+      <a class="footer__credit" href="https://www.freepik.com/vectors/subtle"
+        >Subtle vector created by starline - www.freepik.com</a
+      >
       <script
         type="module"
         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

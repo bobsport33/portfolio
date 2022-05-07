@@ -1,13 +1,44 @@
 .about-me {
-  background-color: $color-dark-2;
+  width: 95%;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color-dark-2, 0.5),
+      rgba($color-dark-2, 0.7)
+    ),
+    url("../images/background.jpg");
+  transform: skewX(-12deg);
   padding: 3rem;
   color: $color-light-blue;
+  box-shadow: 0 2.5rem 4rem rgba($color-dark, 0.5);
+
+  @media only screen and (max-width: $bp-med-small) {
+    transform: skewX(0);
+    width: 100%;
+    box-shadow: none;
+  }
+
+  &__content {
+    display: flex;
+    transform: skewX(12deg);
+    padding: 5rem;
+    @media only screen and (max-width: $bp-med) {
+      flex-direction: column;
+    }
+    @media only screen and (max-width: $bp-med-small) {
+      transform: skewX(0);
+    }
+  }
 
   &__heading {
+    transform: skewX(12deg);
     font-size: 4rem;
     text-decoration: none;
     text-align: center;
     padding: 3rem;
+    @media only screen and (max-width: $bp-med-small) {
+      transform: skewX(0);
+    }
   }
 
   &__background {
@@ -15,5 +46,10 @@
     width: 70%;
     font-size: 2rem;
     padding-bottom: 5rem;
+    padding-right: 2rem;
+  }
+
+  &__resume {
+    margin: 0 auto;
   }
 }

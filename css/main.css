@@ -122,21 +122,38 @@ body {
 }
 
 .header__nav--link {
+  display: inline-block;
   color: #161112;
   text-decoration: none;
   font-size: 2.5rem;
-  -webkit-transform: 0.2s all;
-          transform: 0.2s all;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
 }
 
 .header__nav--link:hover {
   cursor: pointer;
+  color: #d1d1d1;
+  border-bottom: 4px solid #d1d1d1;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 .projects {
   width: 80%;
   margin: 0 auto;
   padding-bottom: 6rem;
+}
+
+@media only screen and (max-width: 830px) {
+  .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .projects__heading {
@@ -198,6 +215,15 @@ body {
   opacity: 0.2;
 }
 
+@media only screen and (max-width: 830px) {
+  .projects__display:hover .front {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    z-index: 10;
+    opacity: 1;
+  }
+}
+
 .projects__display:hover .back {
   opacity: 1;
 }
@@ -221,6 +247,14 @@ body {
   position: absolute;
   top: 50%;
   width: 100%;
+}
+
+@media only screen and (max-width: 830px) {
+  .projects__img--languages {
+    opacity: 1;
+    position: relative;
+    margin-top: 3rem;
+  }
 }
 
 .projects__card {
@@ -260,16 +294,67 @@ body {
 }
 
 .about-me {
-  background-color: #0b2623;
+  width: 95%;
+  margin: 0 auto;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(11, 38, 35, 0.5)), to(rgba(11, 38, 35, 0.7))), url("../images/background.jpg");
+  background-image: linear-gradient(to bottom right, rgba(11, 38, 35, 0.5), rgba(11, 38, 35, 0.7)), url("../images/background.jpg");
+  -webkit-transform: skewX(-12deg);
+          transform: skewX(-12deg);
   padding: 3rem;
   color: #4cc5d0;
+  -webkit-box-shadow: 0 2.5rem 4rem rgba(22, 17, 18, 0.5);
+          box-shadow: 0 2.5rem 4rem rgba(22, 17, 18, 0.5);
+}
+
+@media only screen and (max-width: 750px) {
+  .about-me {
+    -webkit-transform: skewX(0);
+            transform: skewX(0);
+    width: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+.about-me__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: skewX(12deg);
+          transform: skewX(12deg);
+  padding: 5rem;
+}
+
+@media only screen and (max-width: 830px) {
+  .about-me__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .about-me__content {
+    -webkit-transform: skewX(0);
+            transform: skewX(0);
+  }
 }
 
 .about-me__heading {
+  -webkit-transform: skewX(12deg);
+          transform: skewX(12deg);
   font-size: 4rem;
   text-decoration: none;
   text-align: center;
   padding: 3rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .about-me__heading {
+    -webkit-transform: skewX(0);
+            transform: skewX(0);
+  }
 }
 
 .about-me__background {
@@ -277,6 +362,11 @@ body {
   width: 70%;
   font-size: 2rem;
   padding-bottom: 5rem;
+  padding-right: 2rem;
+}
+
+.about-me__resume {
+  margin: 0 auto;
 }
 
 .footer {
@@ -291,18 +381,59 @@ body {
 }
 
 .footer__list--item {
-  color: #0b2623;
+  display: inline-block;
+  color: #309492;
   text-decoration: none;
   font-size: 3rem;
   padding: 3rem;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.footer__list--item:hover {
+  cursor: pointer;
+  color: #0b2623;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 .footer__social {
   font-size: 3rem;
   padding-bottom: 2rem;
+  color: #309492;
+}
+
+.footer__social_icons {
+  display: inline-block;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.footer__social_icons:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.footer__icon {
+  color: #309492;
+  padding: 1rem;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.footer__icon:hover {
+  color: #0b2623;
 }
 
 .footer__copyright {
   font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.footer__credit {
+  list-style: none;
+  text-decoration: none;
+  color: #309492;
 }
 /*# sourceMappingURL=main.css.map */

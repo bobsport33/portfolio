@@ -7,19 +7,56 @@
   &__list {
     margin-bottom: 3rem;
     &--item {
-      color: $color-dark-2;
+      display: inline-block;
+      color: $color-green;
       text-decoration: none;
       font-size: 3rem;
       padding: 3rem;
+      transition: 0.2s all;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-dark-2;
+        transform: translateY(-3px);
+      }
     }
   }
 
   &__social {
     font-size: 3rem;
     padding-bottom: 2rem;
+    color: $color-green;
+
+    &_icons {
+      display: inline-block;
+      transition: 0.2s all;
+
+      &:hover {
+        cursor: pointer;
+
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  &__icon {
+    color: $color-green;
+    padding: 1rem;
+    transition: 0.2s all;
+
+    &:hover {
+      color: $color-dark-2;
+    }
   }
 
   &__copyright {
     font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  &__credit {
+    list-style: none;
+    text-decoration: none;
+    color: $color-green;
   }
 }
